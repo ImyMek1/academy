@@ -52,7 +52,7 @@ export default function Navbar() {
                         whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
                     >
                         <Button asChild size="sm" className="rounded-lg bg-alpha border-transparent shadow-none sm:h-9 sm:px-5">
-                            <Link href="/login">Log in</Link>
+                            <a href="/login">Log in</a>
                         </Button>
                     </motion.div>
                 </div>

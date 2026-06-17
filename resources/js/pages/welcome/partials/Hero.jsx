@@ -150,10 +150,10 @@ export default function Hero() {
                                 whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
                             >
                                 <Button asChild size="lg" className="gap-2 bg-alpha px-6 shadow-none">
-                                    <Link href="/login">
+                                    <a href="/login">
                                         Get Started
                                         <ArrowRight className="h-4 w-4" />
-                                    </Link>
+                                    </a>
                                 </Button>
                             </motion.div>
                             {/* <p className="text-xs text-muted-foreground sm:text-sm">Sign in with your LionsGeek account</p> */}
