@@ -21,6 +21,10 @@ const mainNavItems = [
   title: 'Dashboard',
   href: dashboard(),
   icon: LayoutGrid
+},{
+  title: 'Classes',
+  href: "/class",
+  icon: LayoutGrid
 }];
 
 
