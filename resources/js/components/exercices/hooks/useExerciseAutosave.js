@@ -9,6 +9,7 @@ export function useExerciseAutosave(draftKey, data, enabled = true) {
     const restoreDraft = useCallback(() => {
         try {
             const raw = localStorage.getItem(draftKey);
+
             return raw ? JSON.parse(raw) : null;
         } catch {
             return null;
@@ -21,13 +22,15 @@ export function useExerciseAutosave(draftKey, data, enabled = true) {
     }, [draftKey]);
 
     useEffect(() => {
-        if (!enabled) return;
+        if (!enabled) {
+            return;
+        }
 
-        setStatus('saving');
         clearTimeout(timerRef.current);
 
         timerRef.current = setTimeout(() => {
             try {
+                setStatus('saving');
                 localStorage.setItem(draftKey, JSON.stringify(data));
                 setStatus('saved');
             } catch {
